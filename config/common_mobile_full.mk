@@ -9,10 +9,10 @@ $(call inherit-product-if-exists, external/google-fonts/rubik/fonts.mk)
 
 # Apps
 PRODUCT_PACKAGES += \
-    Eleven \
-    Etar \
+#    Eleven \
+#    Etar \
     Profiles \
-    Recorder \
+#    Recorder \
     Seedvault
 
 ifneq ($(PRODUCT_NO_CAMERA),true)
@@ -21,9 +21,12 @@ PRODUCT_PACKAGES += \
 endif
 
 ifneq ($(TARGET_EXCLUDES_AUDIOFX),true)
-PRODUCT_PACKAGES += \
-    AudioFX
+#PRODUCT_PACKAGES += \
+#    AudioFX
 endif
+
+PRODUCT_PACKAGES += \
+    SettingsIntelligenceGooglePrebuilt
 
 # Extra cmdline tools
 PRODUCT_PACKAGES += \
